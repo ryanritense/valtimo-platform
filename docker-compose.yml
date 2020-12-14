@@ -33,3 +33,7 @@ services:
             - valtimo_implementation
             - valtimo_console
             - valtimo_keycloak
+    valtimo_keycloak:
+        image: ritense/valtimo-keycloak:0.0.2
+        ports:
+            - 8081:8080
