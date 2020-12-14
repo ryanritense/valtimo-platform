@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+    valtimo_openzaak:    
+        image: openzaak/open-zaak
+        environment:
+            - DB_HOST=valtimo_openzaak_postgis
+            - SECRET_KEY=veryRestrictedSecretKey
+            - DB_USER=openzaak
+            - DB_PASSWORD=openzaak 
+            - CACHE_DEFAULT=valtimo_openzaak_redis:6379/0
+            - CACHE_AXES=valtimo_openzaak_redis:6379/0
+            - DEBUG=true 
+            - ALLOWED_HOSTS=localhost
+        ports:
+            - 8000:8000
+    valtimo_openzaak_postgis:
+        image: postgis/postgis
+        environment:
+            - POSTGRES_USER=openzaak 
+            - POSTGRES_PASSWORD=openzaak 
+            - POSTGRES_DB=openzaak
+        ports:
+            - 5432:5432
+    valtimo_openzaak_redis:
+        image: redis
+        ports:
+            - 6379:6379
