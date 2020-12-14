@@ -25,3 +25,11 @@ services:
         image: redis
         ports:
             - 6379:6379
+    valtimo_nginx:
+        image: ritense/valtimo-nginx:0.0.1
+        ports:
+            - 80:80
+        depends_on:
+            - valtimo_implementation
+            - valtimo_console
+            - valtimo_keycloak
