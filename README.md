@@ -9,3 +9,6 @@
 - NGINX reverse proxy
 - KeyCloak
 - Open Zaak
+  - Open Zaak
+  - Redis 
+  - Postgis
