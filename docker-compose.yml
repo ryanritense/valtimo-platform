@@ -30,10 +30,21 @@ services:
         ports:
             - 80:80
         depends_on:
-            - valtimo_implementation
-            - valtimo_console
+            - valtimo_server
             - valtimo_keycloak
     valtimo_keycloak:
         image: ritense/valtimo-keycloak:0.0.2
         ports:
             - 8081:8080
+    valtimo_database:
+        image: mysql:5.7
+        command: --lower_case_table_names=1 --sql_mode=NO_ENGINE_SUBSTITUTION
+        environment:
+            - MYSQL_ROOT_PASSWORD=demo
+            - MYSQL_DATABASE=valtimo
+        ports: 
+            - 3306:3306
+    valtimo_server:
+        image: ritense/valtimo-server:0.0.1
+        ports:
+            - 8080:8080
