@@ -3,7 +3,7 @@
 ### Hoe start ik Valtimo?
 - Download deze repository
 - Voer het volgende commando uit in een terminal:
-```docker-compose -d up```
+```docker-compose up -d```
 
 ### Services:
 - Valtimo Server
