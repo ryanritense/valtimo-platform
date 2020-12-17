@@ -43,5 +43,4 @@ services:
             - 80:80
         depends_on:
             - valtimo_server
-            - valtimo_keycloak
             - valtimo_console
