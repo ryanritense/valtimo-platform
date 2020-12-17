@@ -25,13 +25,6 @@ services:
         image: redis
         ports:
             - 6379:6379
-    valtimo_nginx:
-        image: ritense/valtimo-nginx:0.0.1
-        ports:
-            - 80:80
-        depends_on:
-            - valtimo_server
-            - valtimo_keycloak
     valtimo_keycloak:
         image: ritense/valtimo-keycloak:0.0.2
         ports:
@@ -45,6 +38,18 @@ services:
         ports: 
             - 3306:3306
     valtimo_server:
-        image: ritense/valtimo-server:0.0.1
+        image: ritense/valtimo-server:0.0.2
         ports:
             - 8080:8080
+    valtimo_console:
+        image: ritense/valtimo-console:0.0.1
+        ports:
+            - 4200:80
+    valtimo_nginx:
+        image: ritense/valtimo-nginx:0.0.7
+        ports:
+            - 80:80
+        depends_on:
+            - valtimo_server
+            - valtimo_keycloak
+            - valtimo_console
