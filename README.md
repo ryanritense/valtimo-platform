@@ -6,6 +6,9 @@
 ```docker-compose -d up```
 
 ### Services:
+- Valtimo Server
+- Valtimo Console
+- MySQL database
 - NGINX reverse proxy
 - KeyCloak
 - Open Zaak
