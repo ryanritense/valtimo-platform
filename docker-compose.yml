@@ -19,12 +19,8 @@ services:
             - POSTGRES_USER=openzaak 
             - POSTGRES_PASSWORD=openzaak 
             - POSTGRES_DB=openzaak
-        ports:
-            - 5432:5432
     valtimo_openzaak_redis:
         image: redis
-        ports:
-            - 6379:6379
     valtimo_keycloak:
         image: ritense/valtimo-keycloak:0.0.2
         ports:
