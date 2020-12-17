@@ -6,6 +6,11 @@
 - Voer het volgende commando uit in een terminal:
 ```docker-compose up -d```
 
+### Links
+- Valtimo Console: http://localhost/
+- KeyCloak: http://localhost:8081/
+- Open Zaak: http://localhost:8000
+
 ### Services:
 - Valtimo Server
 - Valtimo Console
