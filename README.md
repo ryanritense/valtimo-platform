@@ -1,4 +1,7 @@
-# Valtimo
+# Valtimo Platform
+
+### Wat is dit? 
+- Serie Docker containers waarmee een compleet platform wordt geinstalleerd voor testdoeleinden. Inclusief OpenZaak.
 
 ### Hoe start ik Valtimo?
 - Installeer Docker Desktop (inclusief Docker Compose): https://docs.docker.com/compose/install/
