@@ -26,7 +26,7 @@
   - Postgis
 
 ### Tips:
-- Keycloak, Valtimo Console (de UI) en Valtimo Server zijn gekoppeld. Voor OpenZaak moet je zelf een user aanmaken, applicatie registreren en daarna de koppeling leggen in de Valtimo Console
+- Keycloak, Valtimo Console (de UI) en Valtimo Server zijn gekoppeld. Voor OpenZaak moet je zelf een user aanmaken, applicatie registreren en daarna de koppeling leggen in de Valtimo Console. Het voorbeeldproces werkt alleen als je OpenZaak koppelt. Als alternatief kun je zelf een proces en formulieren toevoegen en koppelen aan het Dossier "Bezwaren". We zullen een uitlegvideo maken hoe dit te doen.   
 
 ### Hulp:
 - je vindt een installatievideo op https://www.valtimo.nl/kennis/docker-installatie/
