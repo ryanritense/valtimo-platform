@@ -8,6 +8,9 @@
 - Download deze repository
 - Voer het volgende commando uit in een terminal:
 ```docker-compose up -d```
+- Username + Password van Keycloak is demo / demo
+- Username + Password van Valtimo is demo / demo
+- OpenZaak: zie onder. 
 
 ### Links
 - Valtimo Console: http://localhost/
