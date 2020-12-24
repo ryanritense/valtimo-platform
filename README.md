@@ -41,7 +41,7 @@ Vul gebruikersnaam, email en password (2x) in. Hiermee kun je vervolgens inlogge
   - Open Zaak URL: http://host.docker.internal:8000
   - Client ID + Secret: gegevens van de Application
   - RSIN + Organisation: de RSIN van de Catalogus
-- Om Open Zaak te kunnen besturen vanuit een proces maak je eerst een Zaaktype aan in de Catalogus.
+- Om Open Zaak te kunnen besturen vanuit een proces maak je eerst een Zaaktype aan in de Catalogus. Let op dat dit Zaaktype gepubliceerd moet zijn voordat het te gebruiken is.
 
 ## Licentie
 The source files in this repo are licensed to you under the EUPL 1.2. You can download the license in 23 languages: https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12. If you have any questions about the use of this codebase in a larger work: just ask us. 
