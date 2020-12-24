@@ -34,7 +34,7 @@ services:
         ports: 
             - 3306:3306
     valtimo_server:
-        image: ritense/valtimo-server:0.0.2
+        image: ritense/valtimo-server:0.0.3
     valtimo_console:
         image: ritense/valtimo-console:0.0.1
     valtimo_nginx:
