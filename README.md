@@ -27,19 +27,10 @@
   - Open Zaak
   - Redis 
   - Postgis
-
-### Tips:
-- Het voorbeeldproces werkt alleen als je OpenZaak koppelt. Als alternatief kun je zelf een proces en formulieren toevoegen en koppelen aan het Dossier "Bezwaren". 
-
+  
 ### Open Zaak
 - Om in te kunnen loggen op de beheer-omgeving van Open Zaak voer je eerst een configuratiescript uit. Dit doe je door het volgende commando uit te voeren in een terminal:
 ```docker exec -u openzaak valtimo-platform_valtimo_openzaak_postgis_1 psql postgres -f /tmp/openzaak-config.sql```
-
-- In het Valtimo menu Open Zaak vul je de volgende gegevens in:
-  - Open Zaak URL: http://host.docker.internal:8000
-  - Client ID: valtimo_client
-  - Secret: e09b8bc5-5831-4618-ab28-41411304309d
-  - RSIN en Organisation: 103434343
 - Om Open Zaak te kunnen besturen vanuit een proces maak je eerst een Zaaktype aan in de Catalogus. Let op dat dit Zaaktype gepubliceerd moet zijn voordat het te gebruiken is.
 
 ## Licentie
