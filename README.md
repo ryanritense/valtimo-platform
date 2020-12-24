@@ -32,15 +32,14 @@
 - Voor OpenZaak moet je zelf een user aanmaken, applicatie registreren en daarna de koppeling leggen in de Valtimo Console. Het voorbeeldproces werkt alleen als je OpenZaak koppelt. Als alternatief kun je zelf een proces en formulieren toevoegen en koppelen aan het Dossier "Bezwaren". 
 
 ### Open Zaak
-- Om in te kunnen loggen op de beheer-omgeving van Open Zaak maak je eerst een super-user aan. Dit doe je door het volgende commando uit te voeren in een terminal:
-```docker exec -it valtimo-platform_valtimo_openzaak_1 python /app/src/manage.py createsuperuser```
-Vul gebruikersnaam, email en password (2x) in. Hiermee kun je vervolgens inloggen via http://localhost:8000/admin/login/
-- Om Valtimo te koppelen maak je in Open Zaak eerst een Applicatie aan via het menu API Autorisaties. Let op dat de client secret minimaal 30 karakters bevat.
-- Tot slot maak je in Open Zaak een Catalogus aan via het menu Gegevens. 
+- Om in te kunnen loggen op de beheer-omgeving van Open Zaak voer je eerst een configuratiescript uit. Dit doe je door het volgende commando uit te voeren in een terminal:
+```docker exec -u openzaak valtimo-platform_valtimo_openzaak_postgis_1 psql postgres -f /tmp/openzaak-config.sql```
+
 - In het Valtimo menu Open Zaak vul je de volgende gegevens in:
   - Open Zaak URL: http://host.docker.internal:8000
-  - Client ID + Secret: gegevens van de Application
-  - RSIN + Organisation: de RSIN van de Catalogus
+  - Client ID: valtimo_client
+  - Secret: e09b8bc5-5831-4618-ab28-41411304309d
+  - RSIN en Organisation: 103434343
 - Om Open Zaak te kunnen besturen vanuit een proces maak je eerst een Zaaktype aan in de Catalogus. Let op dat dit Zaaktype gepubliceerd moet zijn voordat het te gebruiken is.
 
 ## Licentie
