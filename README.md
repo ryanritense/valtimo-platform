@@ -29,7 +29,12 @@
   - Postgis
 
 ### Tips:
-- Keycloak, Valtimo Console (de UI) en Valtimo Server zijn gekoppeld. Voor OpenZaak moet je zelf een user aanmaken, applicatie registreren en daarna de koppeling leggen in de Valtimo Console. Het voorbeeldproces werkt alleen als je OpenZaak koppelt. Als alternatief kun je zelf een proces en formulieren toevoegen en koppelen aan het Dossier "Bezwaren". We zullen een uitlegvideo maken hoe dit te doen.   
+- Voor OpenZaak moet je zelf een user aanmaken, applicatie registreren en daarna de koppeling leggen in de Valtimo Console. Het voorbeeldproces werkt alleen als je OpenZaak koppelt. Zie https://open-zaak.readthedocs.io/en/stable/development/getting_started.html , punt 7, daar wordt uitgelegd hoe je een user aanmaakt. Als alternatief kun je zelf een proces en formulieren toevoegen en koppelen aan het Dossier "Bezwaren". 
+
+### Open Zaak
+- Om in te kunnen loggen op de beheer-omgeving van Open Zaak maak je eerst een super-user aan. Dit doe je door het volgende commando uit te voeren in een terminal:
+```docker exec -it valtimo-platform_valtimo_openzaak_1 python /app/src/manage.py createsuperuser```
+Vul gebruikersnaam, email en password (2x) in.
 
 ## Licentie
 The source files in this repo are licensed to you under the EUPL 1.2. You can download the license in 23 languages: https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12. If you have any questions about the use of this codebase in a larger work: just ask us. 
