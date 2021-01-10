@@ -14,7 +14,7 @@ services:
         ports:
             - 8000:8000
     valtimo_openzaak_postgis:
-        image: ritense/valtimo-openzaak-database:0.0.2
+        image: ritense/valtimo-openzaak-database:0.0.4
         environment:
             - POSTGRES_USER=openzaak 
             - POSTGRES_PASSWORD=openzaak 
