@@ -39,3 +39,4 @@ All third party components are delivered under their own, original license.
 ### Hulp:
 - je vindt een installatievideo op https://www.valtimo.nl/kennis/docker-installatie/
 - tips op https://docs.valtimo.nl/
+- https://forum.valtimo.nl/
