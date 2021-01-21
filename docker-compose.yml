@@ -40,7 +40,7 @@ services:
     valtimo_console:
         image: ritense/valtimo-console:0.0.2
     valtimo_nginx:
-        image: ritense/valtimo-nginx:0.0.7
+        image: ritense/valtimo-nginx:0.0.8
         ports:
             - 80:80
         depends_on:
