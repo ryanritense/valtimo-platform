@@ -10,11 +10,11 @@ services:
             - CACHE_DEFAULT=valtimo_openzaak_redis:6379/0
             - CACHE_AXES=valtimo_openzaak_redis:6379/0
             - DEBUG=true 
-            - ALLOWED_HOSTS=localhost,host.docker.internal
+            - ALLOWED_HOSTS=localhost,host.docker.internal,172.17.0.1
         ports:
             - 8000:8000
     valtimo_openzaak_postgis:
-        image: ritense/valtimo-openzaak-database:0.0.5
+        image: ritense/valtimo-openzaak-database:0.0.8
         environment:
             - POSTGRES_USER=openzaak 
             - POSTGRES_PASSWORD=openzaak 
@@ -22,7 +22,7 @@ services:
     valtimo_openzaak_redis:
         image: redis
     valtimo_keycloak:
-        image: ritense/valtimo-keycloak:0.0.3
+        image: ritense/valtimo-keycloak:0.0.4
         ports:
             - 8081:8080
     valtimo_database:
@@ -34,11 +34,14 @@ services:
         ports: 
             - 3306:3306
     valtimo_server:
-        image: ritense/valtimo-server:0.0.7
+        image: ritense/valtimo-server:0.0.8
         ports:
             - 8001:8000
+        environment:
+            - KEYCLOAK_HOST=http://${DOCKER_GATEWAY_HOST:-host.docker.internal}:8081
+            - KEYCLOAK_SECRET=
     valtimo_console:
-        image: ritense/valtimo-console:0.0.2
+        image: ritense/valtimo-console:0.0.3
     valtimo_nginx:
         image: ritense/valtimo-nginx:0.0.8
         ports:
