@@ -30,7 +30,7 @@
   
 ### Open Zaak
 - Om in te kunnen loggen op de beheer-omgeving van Open Zaak voer je eerst een configuratiescript uit. Dit doe je door het volgende commando uit te voeren in een terminal:
-```docker exec -u openzaak valtimo-platform_valtimo_openzaak_postgis_1 psql postgres -f /tmp/openzaak-config.sql```
+```docker exec -u openzaak valtimo_openzaak_postgis psql postgres -f /tmp/openzaak-config.sql```
 
 ## Licentie
 The source files in this repo are licensed to you under the EUPL 1.2. You can download the license in 23 languages: https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12. If you have any questions about the use of this codebase in a larger work: just ask us. 
