@@ -2,6 +2,7 @@ version: '3.3'
 services:
     valtimo_openzaak:    
         image: openzaak/open-zaak
+        container_name: valtimo_openzaak
         environment:
             - DB_HOST=valtimo_openzaak_postgis
             - SECRET_KEY=veryRestrictedSecretKey
@@ -14,19 +15,23 @@ services:
         ports:
             - 8000:8000
     valtimo_openzaak_postgis:
-        image: ritense/valtimo-openzaak-database:0.0.8
+        image: ritense/valtimo-openzaak-database:0.0.9
+        container_name: valtimo_openzaak_postgis
         environment:
             - POSTGRES_USER=openzaak 
             - POSTGRES_PASSWORD=openzaak 
             - POSTGRES_DB=openzaak
     valtimo_openzaak_redis:
         image: redis
+        container_name: valtimo_openzaak_redis
     valtimo_keycloak:
         image: ritense/valtimo-keycloak:0.0.4
+        container_name: valtimo_keycloak
         ports:
             - 8081:8080
     valtimo_database:
         image: mysql:5.7
+        container_name: valtimo_database
         command: --lower_case_table_names=1 --sql_mode=NO_ENGINE_SUBSTITUTION
         environment:
             - MYSQL_ROOT_PASSWORD=demo
@@ -34,16 +39,19 @@ services:
         ports: 
             - 3306:3306
     valtimo_server:
-        image: ritense/valtimo-server:0.0.8
+        image: ritense/valtimo-server:0.0.9
+        container_name: valtimo_server
         ports:
             - 8001:8000
         environment:
             - KEYCLOAK_HOST=http://${DOCKER_GATEWAY_HOST:-host.docker.internal}:8081
-            - KEYCLOAK_SECRET=
+            - KEYCLOAK_SECRET=3ce18f4c-6506-42cf-8e0d-3f98b88635e3
     valtimo_console:
-        image: ritense/valtimo-console:0.0.3
+        image: ritense/valtimo-console:0.0.6
+        container_name: valtimo_console
     valtimo_nginx:
         image: ritense/valtimo-nginx:0.0.8
+        container_name: valtimo_nginx
         ports:
             - 80:80
         depends_on:
