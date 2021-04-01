@@ -39,7 +39,7 @@ services:
         ports: 
             - 3306:3306
     valtimo_server:
-        image: ritense/valtimo-server:0.0.9
+        image: ritense/valtimo-server:0.0.10
         container_name: valtimo_server
         ports:
             - 8001:8000
@@ -47,7 +47,7 @@ services:
             - KEYCLOAK_HOST=http://${DOCKER_GATEWAY_HOST:-host.docker.internal}:8081
             - KEYCLOAK_SECRET=3ce18f4c-6506-42cf-8e0d-3f98b88635e3
     valtimo_console:
-        image: ritense/valtimo-console:0.0.6
+        image: ritense/valtimo-console:0.0.7
         container_name: valtimo_console
     valtimo_nginx:
         image: ritense/valtimo-nginx:0.0.8
