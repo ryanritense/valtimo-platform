@@ -28,6 +28,14 @@
   - Redis 
   - Postgis
   
+### Additionele configuratie
+De volgende environment variabelen kunnen worden opgegeven in de Valtimo Server container:
+  - DATABASE_HOST (default: valtimo_database)
+  - DATABASE_PORT (default: 3306)
+  - DATABASE_NAME (default: valtimo)
+  - DATABASE_USER (default: root)
+  - DATABASE_PASSWORD (default: demo)
+  
 ### Open Zaak
 - Om in te kunnen loggen op de beheer-omgeving van Open Zaak voer je eerst een configuratiescript uit. Dit doe je door het volgende commando uit te voeren in een terminal:
 ```docker exec -u openzaak valtimo_openzaak_postgis psql postgres -f /tmp/openzaak-config.sql```
