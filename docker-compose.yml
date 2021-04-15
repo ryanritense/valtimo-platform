@@ -39,7 +39,7 @@ services:
         ports: 
             - 3306:3306
     valtimo_server:
-        image: ritense/valtimo-server:0.0.10
+        image: ritense/valtimo-server:0.0.11
         container_name: valtimo_server
         ports:
             - 8001:8000
