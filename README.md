@@ -29,13 +29,33 @@
   - Postgis
   
 ### Additionele configuratie
+#### Valtimo Server
 De volgende environment variabelen kunnen worden opgegeven in de Valtimo Server container:
   - DATABASE_HOST (default: valtimo_database)
   - DATABASE_PORT (default: 3306)
   - DATABASE_NAME (default: valtimo)
   - DATABASE_USER (default: root)
   - DATABASE_PASSWORD (default: demo)
-  
+
+#### Valtimo Console
+De configuratie van de Valtimo Console kan worden aangepast door middel van een config.json bestand. Deze moet dan als mount worden opgegeven in de docker-compose.yml:
+```
+volumes:
+  - ./config.json:/config.json  
+```
+
+Onderstaande configuratie kan, per property, worden overschreven:
+```
+{
+  "baseUrl": "http://localhost",
+  "keycloak": {
+    "url": "http://localhost:8081/auth",
+    "realm": "valtimo",
+    "clientId": "valtimo-console"
+  }
+}
+```
+
 ### Open Zaak
 - Om in te kunnen loggen op de beheer-omgeving van Open Zaak voer je eerst een configuratiescript uit. Dit doe je door het volgende commando uit te voeren in een terminal:
 ```docker exec -u openzaak valtimo_openzaak_postgis psql postgres -f /tmp/openzaak-config.sql```
