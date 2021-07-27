@@ -39,7 +39,7 @@ services:
         ports: 
             - 3306:3306
     valtimo_server:
-        image: ritense/valtimo-server:0.0.12
+        image: ritense/amsterdam-erfpacht-poc:1
         container_name: valtimo_server
         ports:
             - 8001:8000
