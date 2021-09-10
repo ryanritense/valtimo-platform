@@ -52,6 +52,9 @@ Onderstaande configuratie kan, per property, worden overschreven:
     "url": "http://localhost:8081/auth",
     "realm": "valtimo",
     "clientId": "valtimo-console"
+  },
+  "openzaak": {
+    "catalogusId": ""
   }
 }
 ```
